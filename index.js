@@ -5,7 +5,11 @@ const cors = require('cors');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://your-frontend.vercel.app',
+  methods:["POST","GET"],
+  credentials:true // allow frontend domain
+}));
 app.use(express.json()); // to parse JSON bodies
 
 // Connect to MongoDB
