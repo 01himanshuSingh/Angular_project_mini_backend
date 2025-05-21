@@ -6,7 +6,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://your-frontend.vercel.app',
+  origin: 'https://your-diary-ruddy.vercel.app/',
   methods:["POST","GET"],
   credentials:true // allow frontend domain
 }));
